@@ -1,0 +1,19 @@
+def occurrences_mini(donnees):
+    liste = []
+    n = donnees[0]
+    for i in donnees :
+        if i <= n : 
+            n = i
+            mini = n
+    for i in range(len(donnees)) :
+        if donnees[i] == n :
+            liste.append(i)
+    o = (mini, liste)
+    return o
+# tests
+
+donnees = [+13, +49, +13, +5]
+assert occurrences_mini(donnees) == (5, [3])
+
+donnees = [-84, +75, -84, 0, +16]
+assert occurrences_mini(donnees) == (-84, [0, 2])
