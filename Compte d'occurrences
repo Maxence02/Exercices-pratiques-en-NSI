@@ -1,0 +1,14 @@
+def compte_occurrences(caractere, mot):
+    n = 0
+    for i in range(len(mot)):
+        if mot[i] == caractere :
+            n += 1 
+    return n
+
+
+
+
+# tests
+assert compte_occurrences("o", "bonjour") == 2
+assert compte_occurrences("a", "abracadabra") == 5
+assert compte_occurrences("i", "abracadabra") == 0
